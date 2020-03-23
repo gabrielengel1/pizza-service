@@ -6,7 +6,7 @@ from peewee import *
 app = Flask(__name__, template_folder="templates")
 
 # Connecting to MariaDB Docker Image
-db = MySQLDatabase('MariaDB', user='root', password='root', host='127.0.0.1', port=3306)
+db = MySQLDatabase('homestead', user='root', password='root', host='127.0.0.1', port=3306)
 
 class Person(Model):
     name = CharField()
