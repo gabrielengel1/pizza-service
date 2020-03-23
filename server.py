@@ -3,7 +3,7 @@ from flask import render_template, Flask
 from peewee import *
 
 # Create the application instance
-app = Flask(__name__, template_folder="templates")
+app = Flask(__name__, template_folder='templates')
 
 # Connecting to MariaDB Docker Image
 db = MySQLDatabase('homestead', user='root', password='root', host='127.0.0.1', port=3306)
