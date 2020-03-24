@@ -5,7 +5,6 @@ services:
 
   db:
     image: mariadb:latest
-    restart: always
     ports:
       - 3306:3306
     volumes:
@@ -16,6 +15,5 @@ services:
 
   adminer:
     image: adminer
-    restart: always
     ports:
       - 8080:8080
