@@ -1,6 +1,6 @@
 from flask import render_template, Flask
-from person import Person
 from database import *
+from person import Person
 
 # Create the application instance
 app = Flask(__name__, template_folder='templates')
