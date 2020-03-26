@@ -1,9 +1,7 @@
-from flask import render_template, Flask
-from database import *
-from person import Person
-
-# Create the application instance
-app = Flask(__name__, template_folder='templates')
+from flask import render_template
+from database import db
+from api import app
+from models import create_models
 
 # Create a URL route in application for "/"
 @app.route('/')
@@ -13,5 +11,5 @@ def home():
 # If in stand alone mode, run the application
 if __name__ == '__main__':
     db.connect()
-    db.create_tables([Person])
+    create_models()
     app.run(debug=True)
